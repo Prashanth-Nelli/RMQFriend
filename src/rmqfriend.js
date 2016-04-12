@@ -86,7 +86,7 @@ RMQFriend.prototype.createChannel = function channel(){
 /**
  * @name        send
  *
- * @description This method used to send message blobs to rabbitmq server.
+ * @description This method used to send message data a binary blob to rabbitmq server.
  *              it returns a promise.
  *
  * @returns     {Promise}
@@ -160,9 +160,6 @@ RMQFriend.prototype.registerHandler = function registerHandler(callback){
  *                            that we will send cached messages to the queues and also
  *                            register the consumer callbacks to the queues.
  *
- * @param {Function} callback A callback function which is invoked every time there
- *                            is a message available to process and it should always
- *                            return a promise.
  */
 
 RMQFriend.prototype.handleCachedQueuesAndListeners = function handleCachedQueuesAndListeners(){
